@@ -1,0 +1,97 @@
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-wrapper {
+  position: relative;
+  background-color: #f0f0f0; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #ccc; 
+  width: 60%; 
+}
+
+.video {
+  width: 100%;
+  border-radius: 8px; 
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+.custom-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.custom-controls button {
+  display: none; 
+}
+
+.custom-controls .icon {
+  font-size: 24px;
+  color: #3498db;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.custom-controls .icon:hover {
+  color: #2980b9;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 8px;
+}
+
+span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+.custom-controls .icon {
+  font-size: 24px;
+  color: #3498db;
+  margin: 0 20px; 
+  cursor: pointer;
+  flex: auto;
+  gap: 10;
+}
+
+
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
